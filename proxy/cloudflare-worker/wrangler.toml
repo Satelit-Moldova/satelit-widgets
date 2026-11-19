@@ -1,0 +1,15 @@
+# Satelit widgets proxy on Cloudflare Workers.
+# Set the key as a secret (never here):  npx wrangler secret put SATELIT_API_KEY
+# The Cache API stores answers on a custom domain or route; on *.workers.dev it does not cache.
+name = "satelit-widgets-proxy"
+main = "src/worker.js"
+compatibility_date = "2026-05-01"
+
+[vars]
+# Comma-separated list of sites allowed to call the proxy from the browser, or "*".
+ALLOWED_ORIGINS = "https://example.md"
+# Optional path prefix when the worker shares a domain, e.g. "/satelit-proxy".
+BASE_PATH = ""
+
+# Uncomment to serve it under your own domain (needed for the Cache API):
+# routes = [{ pattern = "example.md/satelit-proxy/*", zone_name = "example.md" }]

@@ -1,0 +1,958 @@
+{
+ "/rates": {
+  "status": 200,
+  "body": {
+   "data": [
+    {
+     "code": "EUR",
+     "name": "Euro",
+     "value": 20.1411,
+     "nominal": 1,
+     "date": "2026-11-19",
+     "change_7d_pct": -0.1,
+     "change_30d_pct": 0.2
+    },
+    {
+     "code": "USD",
+     "name": "Dolar SUA",
+     "value": 18.3744,
+     "nominal": 1,
+     "date": "2026-11-19",
+     "change_7d_pct": 1.5,
+     "change_30d_pct": 2.5
+    },
+    {
+     "code": "RON",
+     "name": "Leu românesc",
+     "value": 3.7671,
+     "nominal": 1,
+     "date": "2026-11-19",
+     "change_7d_pct": -0.1,
+     "change_30d_pct": -0.2
+    }
+   ],
+   "meta": {
+    "credits": 1,
+    "updated_at": "2026-11-19T16:36:34+02:00",
+    "sources": [
+     {
+      "name": "BNM",
+      "url": "https://www.bnm.md/ro/content/ratele-de-schimb",
+      "license": "CC BY 4.0"
+     }
+    ],
+    "attribution": "Sursa: Banca Națională a Moldovei, bnm.md, CC BY 4.0",
+    "notice": "Aceleași date sunt gratuite la bnm.md."
+   }
+  }
+ },
+ "/fuel": {
+  "status": 200,
+  "body": {
+   "data": {
+    "date": "2026-11-19",
+    "cap": {
+     "a95": 28.08,
+     "diesel": 33.46
+    },
+    "networks": [
+     {
+      "key": "lukoil",
+      "name": "Lukoil",
+      "url": "https://lukoil.md/ro/",
+      "stations": 103,
+      "date": "2026-11-19",
+      "stale": false,
+      "prices": {
+       "a95": 28.08,
+       "diesel": 33.46,
+       "lpg": 18.95
+      }
+     },
+     {
+      "key": "rompetrol",
+      "name": "Rompetrol",
+      "url": "https://www.rompetrol.md/",
+      "stations": 95,
+      "date": "2026-11-19",
+      "stale": false,
+      "prices": {
+       "a95": 28.05,
+       "diesel": 33.42,
+       "lpg": 19.0
+      }
+     },
+     {
+      "key": "vento",
+      "name": "Vento",
+      "url": "https://vento-moldova.md/",
+      "stations": 89,
+      "date": "2026-11-19",
+      "stale": false,
+      "prices": {
+       "a95": 28.04,
+       "diesel": 33.44,
+       "lpg": 19.19
+      }
+     }
+    ],
+    "cheapest": {
+     "a95": "tlx",
+     "diesel": "tlx",
+     "lpg": "tlx"
+    },
+    "range": {
+     "a95": {
+      "min": 27.9,
+      "max": 28.8,
+      "networks": 20
+     },
+     "diesel": {
+      "min": 33.25,
+      "max": 34.14,
+      "networks": 20
+     },
+     "lpg": {
+      "min": 18.6,
+      "max": 19.2,
+      "networks": 17
+     }
+    }
+   },
+   "meta": {
+    "credits": 1,
+    "updated_at": "2026-11-19T16:36:34+02:00",
+    "sources": [
+     {
+      "name": "ANRE",
+      "url": "https://anre.md",
+      "license": "Public data of ANRE"
+     }
+    ],
+    "attribution": null
+   }
+  }
+ },
+ "/news?per=3": {
+  "status": 200,
+  "body": {
+   "data": [
+    {
+     "id": "n_2e63dae6c2a47fc06df6",
+     "kind": "brief",
+     "category": {
+      "key": "politics",
+      "label": "Politică"
+     },
+     "title": "PAS va anunța oficial pe 29 noiembrie candidatul pentru Primăria Chișinău, spune Igor Grosu",
+     "dek": null,
+     "gravity": 13,
+     "band": "low",
+     "reach": 0,
+     "region": {
+      "key": "chisinau",
+      "label": "Chișinău"
+     },
+     "regions": [
+      "chisinau"
+     ],
+     "slot": {
+      "key": "noon",
+      "label": "La prânz"
+     },
+     "due_at": "2026-11-19T11:00:00+02:00",
+     "published_at": "2026-11-19T09:03:00+02:00",
+     "sources": [
+      {
+       "name": "Stiri.md",
+       "url": "https://stiri.md/article/politica/pas-si-a-ales-candidatul-la-primaria-chisinau-grosu-dezvaluie-data-anuntului-oficial"
+      },
+      {
+       "name": "Moldpres",
+       "url": "https://www.moldpres.md/rom/societate/igor-grosu-spune-ca-pas-este-aproape-decis-asupra-candidatului-pentru-primaria-chisinau-insa-urmeaza-sa-anunte-oficial-pe-29-noiembrie"
+      }
+     ],
+     "sources_count": 2,
+     "image": null,
+     "reaction": {
+      "score": 0.0,
+      "label": null,
+      "comments": 3
+     },
+     "event_id": "e_dd4c9e0f949322035b9b"
+    },
+    {
+     "id": "n_f64609d7d2b7dbfee8c6",
+     "kind": "brief",
+     "category": {
+      "key": "economy",
+      "label": "Economie și prețuri"
+     },
+     "title": "Guvernul a aprobat bugetul pe 2027: deficit de aproape 20 de miliarde de lei și mai multe fonduri pentru infrastructură și apărare",
+     "dek": null,
+     "gravity": 51,
+     "band": "high",
+     "reach": 3,
+     "region": {
+      "key": "global",
+      "label": "Toată țara"
+     },
+     "regions": [
+      "global"
+     ],
+     "slot": {
+      "key": "noon",
+      "label": "La prânz"
+     },
+     "due_at": "2026-11-19T11:00:00+02:00",
+     "published_at": "2026-11-19T09:01:00+02:00",
+     "sources": [
+      {
+       "name": "TV8",
+       "url": "https://tv8.md/ru/2026/11/19/video-pochti-20-mlrd-leev-defitsita-i-novie-raskhodi-kakim-budet-byudzhet-moldovi-na-2027-god/312893"
+      }
+     ],
+     "sources_count": 1,
+     "image": null,
+     "reaction": null,
+     "event_id": "e_b2eb5387acaee1c87416"
+    },
+    {
+     "id": "n_77c2cff181735252b57a",
+     "kind": "brief",
+     "category": {
+      "key": "education",
+      "label": "Educație"
+     },
+     "title": "Ministerul Educației pregătește schimbări în formarea cadrelor didactice",
+     "dek": null,
+     "gravity": 24,
+     "band": "low",
+     "reach": 1,
+     "region": {
+      "key": "global",
+      "label": "Toată țara"
+     },
+     "regions": [
+      "global"
+     ],
+     "slot": {
+      "key": "morning",
+      "label": "Dimineața"
+     },
+     "due_at": "2026-11-19T08:53:00+02:00",
+     "published_at": "2026-11-19T08:53:00+02:00",
+     "sources": [
+      {
+       "name": "Stiri.md",
+       "url": "https://stiri.md/article/social/reforma-in-formarea-cadrelor-didactice-ce-schimbari-pregateste-ministerul-educatiei"
+      }
+     ],
+     "sources_count": 1,
+     "image": null,
+     "reaction": null,
+     "event_id": "e_ddfbaf112cc4cf33512c"
+    }
+   ],
+   "meta": {
+    "credits": 2,
+    "updated_at": "2026-11-19T10:06:48+02:00",
+    "sources": [
+     {
+      "name": "Satelit",
+      "url": "https://satelit.md",
+      "license": "Satelit"
+     }
+    ],
+    "attribution": null,
+    "page": {
+     "page": 1,
+     "per": 3,
+     "total": 7146,
+     "pages": 2382
+    }
+   }
+  }
+ },
+ "/prices/search?q=lapte": {
+  "status": 200,
+  "body": {
+   "data": [
+    {
+     "id": 3487,
+     "slug": "lapte-casuta-mea-2-5-1l",
+     "name": "Lapte Casuta Mea 2.5% 1 l",
+     "brand": "Casuta Mea",
+     "capacity": "1 l",
+     "category": "dairy_eggs",
+     "min_price": 15.99,
+     "median_price": 18.99,
+     "unit_min_price": 15.99,
+     "price_unit": "l",
+     "stores": 4,
+     "in_stock_stores": 3,
+     "updated_at": "2026-11-19T16:31:33+02:00"
+    },
+    {
+     "id": 217,
+     "slug": "lapte-jlc-2-5-1l",
+     "name": "Lapte JLC 2.5% 1 l",
+     "brand": "JLC",
+     "capacity": "1 l",
+     "category": "dairy_eggs",
+     "min_price": 16.99,
+     "median_price": 18.02,
+     "unit_min_price": 16.99,
+     "price_unit": "l",
+     "stores": 4,
+     "in_stock_stores": 4,
+     "updated_at": "2026-11-19T16:31:33+02:00"
+    },
+    {
+     "id": 127,
+     "slug": "lapte-prodlacta-ultrapasterizat-3-5-1l",
+     "name": "Lapte Prodlacta ultrapasterizat 3.5% 1 l",
+     "brand": "Prodlacta",
+     "capacity": "1 l",
+     "category": "dairy_eggs",
+     "min_price": 29.99,
+     "median_price": 34.8,
+     "unit_min_price": 29.99,
+     "price_unit": "l",
+     "stores": 4,
+     "in_stock_stores": 3,
+     "updated_at": "2026-11-19T01:01:42+02:00"
+    }
+   ],
+   "meta": {
+    "credits": 3,
+    "updated_at": "2026-11-19T16:31:33+02:00",
+    "sources": [
+     {
+      "name": "Baby Boom",
+      "url": "https://www.baby-boom.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     },
+     {
+      "name": "Bonus",
+      "url": "https://bonus.zakaz.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     },
+     {
+      "name": "Family Market",
+      "url": "https://familymarket.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     }
+    ],
+    "attribution": null,
+    "page": {
+     "page": 1,
+     "per": 20,
+     "total": 100,
+     "pages": 5
+    }
+   }
+  }
+ },
+ "/movies/cinemas/today": {
+  "status": 200,
+  "body": {
+   "data": {
+    "country": "MD",
+    "day": "2026-11-19",
+    "cinemas": [
+     {
+      "cinema": {
+       "id": "c3966341138",
+       "name": "Cineplex Mall",
+       "chain": "Cineplex",
+       "city": "Chișinău",
+       "address": "Arborilor 21, 4th floor, Shopping Malldova",
+       "screens": 6,
+       "lat": null,
+       "lon": null,
+       "sessions": 77,
+       "first_day": "2026-11-19",
+       "last_day": "2026-11-22"
+      },
+      "films": [
+       {
+        "id": "m1794494",
+        "kind": "movie",
+        "title": "Badanta",
+        "original_title": "Badanta",
+        "year": 2026,
+        "released": "2026-10-01",
+        "language": "ro",
+        "rating": null,
+        "overview": "Valea leaves for Italy to earn money for an apartment, but Valera loses the family's savings. Desperate to hide the truth, he heads to Italy and gets caught up with Italian mobsters, precious stones, and total chaos.",
+        "pictures": {
+         "poster": {
+          "s": "https://api.satelit.md/v1/movies/img/s/4F4r5hZpiuWscSBe3MtcmBcSzg5.jpg",
+          "m": "https://api.satelit.md/v1/movies/img/m/4F4r5hZpiuWscSBe3MtcmBcSzg5.jpg",
+          "l": "https://api.satelit.md/v1/movies/img/l/4F4r5hZpiuWscSBe3MtcmBcSzg5.jpg"
+         }
+        },
+        "listed_title": "Badanta",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "10:10",
+          "hall": "Sala 6",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ro",
+          "language": "RO Dublat RO",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "11:10",
+          "hall": "Sala 2",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ro",
+          "language": "RO Dublat RO",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "13:10",
+          "hall": "Sala 2",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ro",
+          "language": "RO Dublat RO",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       },
+       {
+        "id": "m1263337",
+        "kind": "movie",
+        "title": "În inima sălbăticiei",
+        "original_title": "Heart of the Beast",
+        "year": 2026,
+        "released": "2026-09-19",
+        "language": "en",
+        "rating": {
+         "value": 7.7,
+         "votes": 978
+        },
+        "overview": "După un accident aviatic cumplit, un ofițer din Forțele Speciale și câinele său de luptă se trezesc blocați în adâncul sălbăticiei din Alaska. Împreună, sunt nevoiți să ducă o luptă brutală pentru supraviețuire împotriva forțelor naturii.",
+        "pictures": {
+         "poster": {
+          "s": "https://api.satelit.md/v1/movies/img/s/6sYemVUn79UPKz1ZsSG6kPU4RVy.jpg",
+          "m": "https://api.satelit.md/v1/movies/img/m/6sYemVUn79UPKz1ZsSG6kPU4RVy.jpg",
+          "l": "https://api.satelit.md/v1/movies/img/l/6sYemVUn79UPKz1ZsSG6kPU4RVy.jpg"
+         },
+         "backdrop": {
+          "m": "https://api.satelit.md/v1/movies/img/m/nlqHh1zGH8HYERr4eRICN9ligk.jpg",
+          "w": "https://api.satelit.md/v1/movies/img/w/nlqHh1zGH8HYERr4eRICN9ligk.jpg"
+         }
+        },
+        "listed_title": "În inima sălbăticiei",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "10:30",
+          "hall": "Sala 3",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "21:30",
+          "hall": "Sala 3",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       },
+       {
+        "id": null,
+        "kind": "movie",
+        "title": "Chisinau, My Love",
+        "year": null,
+        "rating": null,
+        "pictures": null,
+        "listed_title": "Chisinau, My Love",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "11:50",
+          "hall": "Sala 1",
+          "formats": [
+           "2D"
+          ],
+          "audio": "en",
+          "language": "EN Subtitrat EN-RO",
+          "subtitles": "ro",
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "13:50",
+          "hall": "Sala 4",
+          "formats": [
+           "2D"
+          ],
+          "audio": "en",
+          "language": "EN Subtitrat EN-RO",
+          "subtitles": "ro",
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "18:30",
+          "hall": "Sala 4",
+          "formats": [
+           "2D"
+          ],
+          "audio": "en",
+          "language": "EN Subtitrat EN-RO",
+          "subtitles": "ro",
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "cinema": {
+       "id": "c789032329",
+       "name": "Cineplex Balti",
+       "chain": "Cineplex",
+       "city": "Bălți",
+       "address": "Nicolae Iorga 5, 2nd floor, EVIMALL",
+       "screens": 3,
+       "lat": null,
+       "lon": null,
+       "sessions": 24,
+       "first_day": "2026-11-19",
+       "last_day": "2026-11-22"
+      },
+      "films": [
+       {
+        "id": "m438631",
+        "kind": "movie",
+        "title": "Dune",
+        "original_title": "Dune",
+        "year": 2021,
+        "released": "2021-09-15",
+        "language": "en",
+        "rating": {
+         "value": 7.8,
+         "votes": 15990
+        },
+        "overview": "Paul Atreides, un tânăr strălucit și talentat născut cu un mare destin, dincolo de capacitatea lui de înțelegere, trebuie să călătorească pe cea mai periculoasă planetă din univers pentru a asigura viitorul familiei și poporului său. Pe măsură ce forțe malefice intră în conflict pentru monopolul asu…",
+        "pictures": {
+         "poster": {
+          "s": "https://api.satelit.md/v1/movies/img/s/h7Q20HftAApY3VXlfCyeNIuZWg0.jpg",
+          "m": "https://api.satelit.md/v1/movies/img/m/h7Q20HftAApY3VXlfCyeNIuZWg0.jpg",
+          "l": "https://api.satelit.md/v1/movies/img/l/h7Q20HftAApY3VXlfCyeNIuZWg0.jpg"
+         },
+         "backdrop": {
+          "m": "https://api.satelit.md/v1/movies/img/m/h61Kc0NC7d90jNwXfBx5js7DnSQ.jpg",
+          "w": "https://api.satelit.md/v1/movies/img/w/h61Kc0NC7d90jNwXfBx5js7DnSQ.jpg"
+         }
+        },
+        "listed_title": "Dune",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "10:40",
+          "hall": "Sala 3",
+          "formats": [
+           "3D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat EN-RO,RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "16:00",
+          "hall": "Sala 3",
+          "formats": [
+           "3D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat EN-RO,RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       },
+       {
+        "id": "m1465063",
+        "kind": "movie",
+        "title": "Insula pierdută",
+        "original_title": "Forgotten Island",
+        "year": 2026,
+        "released": "2026-09-10",
+        "language": "en",
+        "rating": {
+         "value": 8.1,
+         "votes": 267
+        },
+        "overview": "Jo și Raissa, absolvente de liceu, sunt cele mai bune prietene încă din școala primară, dar se pregătesc acum să pornească pe drumuri diferite în viață. În timp ce își petrec ultima seară împreună, Jo și Raissa descoperă din întâmplare un portal misterios, care le transportă pe fantastica insulă Nak…",
+        "pictures": {
+         "poster": {
+          "s": "https://api.satelit.md/v1/movies/img/s/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg",
+          "m": "https://api.satelit.md/v1/movies/img/m/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg",
+          "l": "https://api.satelit.md/v1/movies/img/l/Lr0Ng7Gg02RW1AyfYEL6P0WUvd.jpg"
+         },
+         "backdrop": {
+          "m": "https://api.satelit.md/v1/movies/img/m/iU2RVy0G99XoDSUHvcQomtif5nP.jpg",
+          "w": "https://api.satelit.md/v1/movies/img/w/iU2RVy0G99XoDSUHvcQomtif5nP.jpg"
+         }
+        },
+        "listed_title": "Insula pierdută",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "11:40",
+          "hall": "Sala 1",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ro",
+          "language": "RO Dublat RO",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       },
+       {
+        "id": null,
+        "kind": "movie",
+        "title": "Cum să spargi o bancă",
+        "year": null,
+        "rating": null,
+        "pictures": null,
+        "listed_title": "Cum să spargi o bancă",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "14:00",
+          "hall": "Sala 1",
+          "formats": [
+           "2D"
+          ],
+          "audio": "en",
+          "language": "EN Subtitrat EN-RO",
+          "subtitles": "ro",
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "18:30",
+          "hall": "Sala 1",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat EN-RO,RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         },
+         {
+          "date": "2026-11-19",
+          "time": "20:50",
+          "hall": "Sala 1",
+          "formats": [
+           "2D"
+          ],
+          "audio": "ru",
+          "language": "RU Dublat EN-RO,RU",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "cinema": {
+       "id": "c4166880888",
+       "name": "Cineplex Loteanu",
+       "chain": "Cineplex",
+       "city": "Chișinău",
+       "address": "Stefan cel Mare, 103",
+       "screens": 3,
+       "lat": null,
+       "lon": null,
+       "sessions": 8,
+       "first_day": "2026-11-19",
+       "last_day": "2026-11-22"
+      },
+      "films": [
+       {
+        "id": "m1477104",
+        "kind": "movie",
+        "title": "Shaun the Sheep: The Beast of Mossy Bottom",
+        "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
+        "year": 2026,
+        "released": "2026-09-17",
+        "language": "en",
+        "rating": {
+         "value": 7.3,
+         "votes": 62
+        },
+        "overview": "On Halloween Eve at Mossy Bottom Farm, excitement turns to dismay when the clumsy Farmer ruins the pumpkin patch. Shaun tries fixing it with science experiments, but things go awry when a wild beast appears in the woods.",
+        "pictures": {
+         "poster": {
+          "s": "https://api.satelit.md/v1/movies/img/s/gayX49siwXf8eNs16rtk1fI91Ey.jpg",
+          "m": "https://api.satelit.md/v1/movies/img/m/gayX49siwXf8eNs16rtk1fI91Ey.jpg",
+          "l": "https://api.satelit.md/v1/movies/img/l/gayX49siwXf8eNs16rtk1fI91Ey.jpg"
+         },
+         "backdrop": {
+          "m": "https://api.satelit.md/v1/movies/img/m/iUFQd0mzDOUCsc8qVwUcNhFIe2P.jpg",
+          "w": "https://api.satelit.md/v1/movies/img/w/iUFQd0mzDOUCsc8qVwUcNhFIe2P.jpg"
+         }
+        },
+        "listed_title": "Mielul Shaun - Aventuri de Halloween",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "11:50",
+          "hall": "Sala 4",
+          "formats": [
+           "2D"
+          ],
+          "audio": null,
+          "language": "Dublat",
+          "subtitles": null,
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       },
+       {
+        "id": null,
+        "kind": "movie",
+        "title": "Ebenezer: O poveste de Craciun",
+        "year": null,
+        "rating": null,
+        "pictures": null,
+        "listed_title": "Ebenezer: O poveste de Craciun",
+        "sessions": [
+         {
+          "date": "2026-11-19",
+          "time": "13:20",
+          "hall": "Sala 2",
+          "formats": [
+           "2D"
+          ],
+          "audio": "en",
+          "language": "EN Subtitrat EN-RO",
+          "subtitles": "ro",
+          "price": null,
+          "currency": null,
+          "sold_out": false,
+          "booking_url": null
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "coverage": {
+     "country": "MD",
+     "chains": 2,
+     "cinemas": 4,
+     "cinemas_with_sessions": 3,
+     "cities": 2,
+     "sessions": 109,
+     "films": 9,
+     "first_day": "2026-11-19",
+     "last_day": "2026-11-22",
+     "read_at": "2026-11-19T03:06:19Z"
+    }
+   },
+   "meta": {
+    "credits": 40,
+    "updated_at": null,
+    "sources": [
+     {
+      "name": "Satelit",
+      "url": "https://satelit.md",
+      "license": "Satelit"
+     }
+    ],
+    "attribution": null
+   }
+  }
+ },
+ "/prices/items/3487": {
+  "status": 200,
+  "body": {
+   "data": {
+    "id": 3487,
+    "slug": "lapte-casuta-mea-2-5-1l",
+    "name": "Lapte Casuta Mea 2.5% 1 l",
+    "brand": "Casuta Mea",
+    "capacity": "1 l",
+    "category": "dairy_eggs",
+    "min_price": 15.99,
+    "median_price": 18.99,
+    "unit_min_price": 15.99,
+    "price_unit": "l",
+    "stores": 4,
+    "in_stock_stores": 3,
+    "updated_at": "2026-11-19T16:31:33+02:00",
+    "offers": [
+     {
+      "store": {
+       "key": "metro",
+       "name": "METRO"
+      },
+      "title": "Lapte Casuta Mea 2,5% 1l",
+      "price": 15.99,
+      "old_price": 17.9,
+      "discount_pct": 11,
+      "unit_price": 15.99,
+      "unit": "l",
+      "in_stock": true,
+      "url": "https://metro.zakaz.md/ro/products/lapte-casuta-mea-1000ml-moldova--04840331000449/",
+      "last_seen": "2026-11-19T00:32:54+02:00"
+     },
+     {
+      "store": {
+       "key": "bonus",
+       "name": "Bonus"
+      },
+      "title": "Lapte Casuta Mea 2,5% 1l",
+      "price": 18.3,
+      "old_price": null,
+      "discount_pct": null,
+      "unit_price": 18.3,
+      "unit": "l",
+      "in_stock": false,
+      "url": "https://bonus.zakaz.md/ro/products/lapte-casuta-mea-1000ml-moldova--04840331000449/",
+      "last_seen": "2026-11-15T01:32:45+02:00"
+     },
+     {
+      "store": {
+       "key": "linella",
+       "name": "Linella"
+      },
+      "title": "Lapte 2.5% 1l LAP CASUTA MEA",
+      "price": 18.99,
+      "old_price": null,
+      "discount_pct": null,
+      "unit_price": 18.99,
+      "unit": "l",
+      "in_stock": true,
+      "url": "https://linella.md/lactate/lapte/lapte-2-5-1l-lap-casuta-mea/",
+      "last_seen": "2026-11-19T16:31:33+02:00"
+     },
+     {
+      "store": {
+       "key": "megaalina",
+       "name": "MegaAlina"
+      },
+      "title": "Casuta Mea Lapte 2,5% 1000ml",
+      "price": 18.99,
+      "old_price": null,
+      "discount_pct": null,
+      "unit_price": 18.99,
+      "unit": "l",
+      "in_stock": true,
+      "url": "https://www.megaalina.md/ro/catalog/lapte/casuta-mea-lapte-25-1000ml",
+      "last_seen": "2026-11-19T02:05:46+02:00"
+     }
+    ]
+   },
+   "meta": {
+    "credits": 2,
+    "updated_at": "2026-11-19T16:31:33+02:00",
+    "sources": [
+     {
+      "name": "Bonus",
+      "url": "https://bonus.zakaz.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     },
+     {
+      "name": "Linella",
+      "url": "https://linella.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     },
+     {
+      "name": "METRO",
+      "url": "https://metro.zakaz.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     },
+     {
+      "name": "MegaAlina",
+      "url": "https://www.megaalina.md",
+      "license": "none: read from the shop's public pages; no agreement with the shop and no licence over its data is granted"
+     }
+    ],
+    "attribution": null
+   }
+  }
+ }
+}

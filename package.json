@@ -1,0 +1,17 @@
+{
+  "name": "satelit-widgets",
+  "version": "1.0.0",
+  "description": "Drop-in Web Components for Moldova's data (BNM rates, converter, fuel, cinema, news, shop prices) on any site, with small key-holding proxies.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "files": ["dist", "proxy", "demo"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "proxy": "node proxy/node/server.mjs",
+    "smoke": "node tests/live/smoke.mjs"
+  },
+  "repository": { "type": "git", "url": "https://github.com/Satelit-Moldova/satelit-widgets" }
+}
