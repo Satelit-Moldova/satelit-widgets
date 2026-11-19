@@ -32,7 +32,7 @@ browser: <satelit-rates>  ──►  your proxy (key, allow-list, cache, CORS)  
 
 ## Requirements
 
-- A Satelit API key (a paid plan; see [pricing](https://developer.satelit.md/en/pricing/), keys in the [console](https://developer.satelit.md/en/console/)).
+- A Satelit API key (a paid plan, see [pricing](https://developer.satelit.md/en/pricing/), keys in the [console](https://developer.satelit.md/en/console/)).
 - One place to run the proxy: a Node 18+ server, a Cloudflare account, or any PHP host.
 - Browsers with Custom Elements and Shadow DOM (all current browsers).
 
@@ -55,7 +55,7 @@ SATELIT_API_KEY=sat_live_… ALLOWED_ORIGINS=https://your-site.md PORT=8787 node
 | `PORT`, `HOST` | `8787`, `127.0.0.1` | Where it listens. Put it behind your web server (`/satelit-proxy/` → `127.0.0.1:8787`), or set `HOST=0.0.0.0`. |
 | `BASE_PATH` | (none) | A path prefix, e.g. `/satelit-proxy`, when it is reached under one. |
 | `CACHE_MAX` | `500` | Answers kept in memory (LRU). |
-| `MISS_LIMIT_PER_MIN` | `60` | Uncached requests per IP per minute; cached ones are never limited. |
+| `MISS_LIMIT_PER_MIN` | `60` | Uncached requests per IP per minute. Cached ones are never limited. |
 | `UPSTREAM_LIMIT_PER_MIN` | `300` | API calls per minute for the whole proxy. |
 | `STATIC_DIR` | (none) | Also serve files from this folder (used to run the demo). |
 
@@ -77,7 +77,7 @@ Answers are kept in the Cache API. Cloudflare's Cache API stores nothing on `*.w
 1. Upload `proxy/php/satelit-proxy.php` to your site, e.g. as `/satelit-proxy.php`.
 2. Put the key in `satelit-key.txt` **one folder above** the PHP file (outside the web root), or in the `SATELIT_API_KEY` environment variable, or (last resort) in the constant at the top of the file.
 3. Set `SATELIT_ALLOWED_ORIGINS` at the top of the file to your site.
-4. Use `data-proxy="/satelit-proxy.php"`. The widgets call `/satelit-proxy.php/rates?lang=ro`; where the host turns `PATH_INFO` off, `/satelit-proxy.php?path=/rates&lang=ro` works too.
+4. Use `data-proxy="/satelit-proxy.php"`. The widgets call `/satelit-proxy.php/rates?lang=ro`. Where the host turns `PATH_INFO` off, `/satelit-proxy.php?path=/rates&lang=ro` works too.
 
 Answers are cached as files in the system temp folder (or `SATELIT_CACHE_DIR`), written atomically.
 
@@ -85,14 +85,14 @@ Answers are cached as files in the system temp folder (or `SATELIT_CACHE_DIR`), 
 
 ### Elements and attributes
 
-Every element takes `lang` (`ro`, `ru`, `en`; default: the page's `<html lang>`, else `ro`), `theme` (`light`, `dark`, `auto` = the visitor's system setting; default `auto`), `limit`, and `proxy` (overrides the script's `data-proxy`). Changing an attribute reloads the element.
+Every element takes `lang` (`ro`, `ru`, `en`, default: the page's `<html lang>`, else `ro`), `theme` (`light`, `dark`, `auto` = the visitor's system setting, default `auto`), `limit`, and `proxy` (overrides the script's `data-proxy`). Changing an attribute reloads the element.
 
 | Element | Own attributes | Shows | API route (credits) |
 |---|---|---|---|
 | `<satelit-rates>` | `codes="EUR,USD"`, `limit` (5) | BNM official rates, 7-day change | `/rates` (1) |
 | `<satelit-converter>` | `from` (EUR), `to` (MDL), `amount` (100) | Converter on BNM rates, recalculated as you type | `/rates` (1, shared with rates) |
 | `<satelit-fuel>` | `fuel` = `a95` \| `diesel` \| `lpg`, `limit` (8) | Networks by price, the cheapest marked, ANRE cap | `/fuel` (1) |
-| `<satelit-cinema>` | `city` (all cities when empty), `limit` (6 films per cinema) | Today's sessions per cinema: time, format, audio and subtitles, sold-out, booking link when there is one; past sessions dimmed | `/movies/cinemas/today` (40) |
+| `<satelit-cinema>` | `city` (all cities when empty), `limit` (6 films per cinema) | Today's sessions per cinema: time, format, audio and subtitles, sold-out, booking link when there is one. Past sessions dimmed | `/movies/cinemas/today` (40) |
 | `<satelit-news>` | `category`, `region`, `limit` (5) | Latest stories with the outlets that reported them | `/news` (2) |
 | `<satelit-prices>` | `q` (required), `limit` (4) | Products matching `q`, lowest price in stock and the shop selling at it | `/prices/search` (3) + `/prices/items/{id}` (2 each) |
 
@@ -111,7 +111,7 @@ Available: `--sw-bg`, `--sw-fg`, `--sw-muted`, `--sw-line`, `--sw-accent`, `--sw
 
 ### Site builders
 
-Any page that accepts a custom `<script>` and HTML can host the widgets, for example an "HTML block" or "custom code" element on Tilda or Wix, or a theme template in an older CMS. Put the script tag and the elements in the same block; the proxy must allow that site's origin (for Wix, the published domain). We tested plain HTML pages in Chrome only (see "Tested with").
+Any page that accepts a custom `<script>` and HTML can host the widgets, for example an "HTML block" or "custom code" element on Tilda or Wix, or a theme template in an older CMS. Put the script tag and the elements in the same block. The proxy must allow that site's origin (for Wix, the published domain). We tested plain HTML pages in Chrome only (see "Tested with").
 
 ### Demo
 
@@ -146,9 +146,9 @@ Order of magnitude, one language, cache always warm: rates 8 + fuel 12 + news 28
 ## Security
 
 - The key stays in the proxy (environment variable, Worker secret, or a file outside the web root). It is never sent to the browser, logged, or put in a URL.
-- Only six GET routes pass, with checked values; anything else is answered by the proxy (404/422) without calling the API.
+- Only six GET routes pass, with checked values. Anything else is answered by the proxy (404/422) without calling the API.
 - Every API call has a 10-second timeout. A failure shows "data not available" in the widget, never a broken page.
-- All data is escaped before it reaches the DOM; only `http(s)` links are rendered.
+- All data is escaped before it reaches the DOM. Only `http(s)` links are rendered.
 
 ## Tested with
 
@@ -169,9 +169,9 @@ Not tested by us: the Worker deployed on Cloudflare's network, the PHP proxy und
 | "Datele nu sunt disponibile acum." | Inspect the element: its `data-error` attribute holds the reason (`http_403`, `not_configured`, …). |
 | 403 `origin_not_allowed` | Add your site's exact origin (`https://www.example.md`, no path) to `ALLOWED_ORIGINS`. |
 | 503 `not_configured` | The proxy has no key. |
-| 401 `key_invalid` / 402 `plan_required` | The key or the plan; see the [errors page](https://developer.satelit.md/en/errors/). |
-| 429 `rate_limited` from the proxy | Too many uncached requests from one IP; cached answers keep working. |
-| Worker never shows `X-Cache: HIT` | It runs on `*.workers.dev`; give it a route on your own zone. |
+| 401 `key_invalid` / 402 `plan_required` | The key or the plan. See the [errors page](https://developer.satelit.md/en/errors/). |
+| 429 `rate_limited` from the proxy | Too many uncached requests from one IP. Cached answers keep working. |
+| Worker never shows `X-Cache: HIT` | It runs on `*.workers.dev`. Give it a route on your own zone. |
 | Cinema widget empty | No sessions today in that city; `city` must match the API's name (diacritics optional: `Balti` = `Bălți`). |
 
 ## Development
@@ -186,7 +186,7 @@ The mock API in `tests/mock-api.mjs` serves real answers recorded on 19 Nov 2026
 
 ## Pe scurt (română)
 
-Widgeturi gata de pus pe orice site (HTML simplu, Tilda, Wix, un CMS vechi): cursul BNM, convertor valutar, prețuri la carburanți, seanse de cinema azi, știri și prețuri din magazine. Se pune un `<script>` și elementele `<satelit-…>`; limba (`lang`), tema (`theme`) și numărul de rânduri (`limit`) se aleg din atribute. Cheia API nu ajunge niciodată în browser: stă într-un proxy mic pe care îl găzduiți (Node, Cloudflare Worker sau un singur fișier PHP), care lasă să treacă doar rutele necesare, păstrează răspunsurile în cache (curs 3 h, carburanți 2 h, știri 10 min, cinema 2 h) și adaugă CORS pentru site-urile voastre. Păstrați vizibile linia sursei (de ex. BNM) și linkul „Date: Satelit”.
+Widgeturi gata de pus pe orice site (HTML simplu, Tilda, Wix, un CMS vechi): cursul BNM, convertor valutar, prețuri la carburanți, seanse de cinema azi, știri și prețuri din magazine. Se pune un `<script>` și elementele `<satelit-…>`. Limba (`lang`), tema (`theme`) și numărul de rânduri (`limit`) se aleg din atribute. Cheia API nu ajunge niciodată în browser: stă într-un proxy mic pe care îl găzduiți (Node, Cloudflare Worker sau un singur fișier PHP), care lasă să treacă doar rutele necesare, păstrează răspunsurile în cache (curs 3 h, carburanți 2 h, știri 10 min, cinema 2 h) și adaugă CORS pentru site-urile voastre. Păstrați vizibile linia sursei (de ex. BNM) și linkul „Date: Satelit”.
 
 ## License
 
